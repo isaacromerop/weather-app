@@ -1,25 +1,6 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-const appearRight = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 1,
-      duration: 0.5,
-      type: "tween",
-    },
-  },
-};
-
-export const Wrapper = styled(motion.div).attrs(() => ({
-  variants: appearRight,
-  initial: "hidden",
-  animate: "visible",
-}))`
+export const Wrapper = styled.div`
   overflow-y: visible;
   height: 20.5rem;
   position: relative;
