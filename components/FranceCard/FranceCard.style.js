@@ -31,6 +31,7 @@ export const Wrapper = styled.div`
     }
 
     .temperature {
+      min-width: 4rem;
       p {
         display: flex;
         justify-content: center;

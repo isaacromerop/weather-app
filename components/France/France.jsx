@@ -2,11 +2,11 @@ import { Wrapper } from "./France.styled";
 import FranceCard from "../FranceCard/FranceCard";
 import AddLocation from "../AddLocation/AddLocation";
 
-const France = () => {
+const France = ({ paris, lyon }) => {
   return (
     <Wrapper>
-      <FranceCard />
-      <FranceCard />
+      <FranceCard info={paris} />
+      <FranceCard info={lyon} />
       <AddLocation />
     </Wrapper>
   );
