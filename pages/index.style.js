@@ -14,7 +14,7 @@ const appear = {
   },
 };
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
     html {
         height: 100%;
     }
@@ -39,3 +39,5 @@ export const Wrapper = styled(motion.div).attrs(() => ({
   display: flex;
   justify-content: center;
 `;
+
+export default GlobalStyle;
