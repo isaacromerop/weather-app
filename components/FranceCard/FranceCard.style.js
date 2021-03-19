@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  cursor: pointer;
   width: 20rem;
   height: 8rem;
   background-color: #fff;
@@ -12,6 +13,11 @@ export const Wrapper = styled.div`
   box-shadow: 7px 9px 25px 13px rgba(0, 0, 0, 0.13);
   display: flex;
   flex-direction: column;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   .country {
     display: flex;

@@ -53,10 +53,6 @@ export default function Home() {
     fetchParis();
   }, []);
 
-  console.log(lyon);
-  console.log(bogota);
-  console.log(paris);
-
   return bogota && paris && lyon ? (
     <>
       <GlobalStyle />

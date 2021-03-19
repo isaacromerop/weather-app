@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  cursor: pointer;
   height: 10rem;
   width: 20rem;
   position: relative;
@@ -13,6 +14,11 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   .button {
     display: flex;
@@ -29,7 +35,7 @@ export const Wrapper = styled.div`
       background-color: #eee6ff;
 
       &:focus {
-          outline: none;
+        outline: none;
       }
     }
   }

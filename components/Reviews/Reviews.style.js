@@ -1,17 +1,42 @@
 import styled from "styled-components";
 import { FaPlus } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-export const Wrapper = styled.div`
+const appearRight = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 0.5,
+      type: "tween",
+    },
+  },
+};
+
+export const Wrapper = styled(motion.div).attrs(() => ({
+  variants: appearRight,
+  initial: "hidden",
+  animate: "visible",
+}))`
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 2rem;
   .reviewers {
+    cursor: pointer;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 3.5rem;
     margin-bottom: 1rem;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     .pictures {
       display: flex;
@@ -41,6 +66,7 @@ export const Wrapper = styled.div`
     }
   }
   .place {
+    cursor: pointer;
     background: url("/assets/images/abstract.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -50,8 +76,14 @@ export const Wrapper = styled.div`
     border-radius: 2rem;
     margin-bottom: 1rem;
     padding: 1rem 0 0;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
   .location {
+    cursor: pointer;
     position: relative;
     width: 15rem;
     height: 10rem;
@@ -61,6 +93,11 @@ export const Wrapper = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     .plus-button {
       cursor: pointer;

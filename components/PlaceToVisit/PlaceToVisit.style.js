@@ -1,6 +1,25 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Wrapper = styled.div`
+const appearLeft = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 0.5,
+      type: "tween",
+    },
+  },
+};
+
+export const Wrapper = styled(motion.div).attrs(() => ({
+  variants: appearLeft,
+  initial: "hidden",
+  animate: "visible",
+}))`
   display: flex;
   flex-direction: column;
 
@@ -16,6 +35,7 @@ export const Wrapper = styled.div`
   }
 
   .visit-image {
+    cursor: pointer;
     height: 17.5rem;
     width: 15.5rem;
     background: url("/assets/images/moskow.jpg");
@@ -26,6 +46,11 @@ export const Wrapper = styled.div`
     margin-bottom: 2rem;
     -webkit-box-shadow: 7px 9px 25px 13px rgba(0, 0, 0, 0.13);
     box-shadow: 7px 9px 25px 13px rgba(0, 0, 0, 0.13);
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     .content {
       height: 100%;

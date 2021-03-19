@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  cursor: pointer;
   position: relative;
   width: 15rem;
   height: 5rem;
@@ -11,6 +12,11 @@ export const Wrapper = styled.div`
   margin-bottom: 1rem;
   border: 1px solid lightgray;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   .details {
     .day {

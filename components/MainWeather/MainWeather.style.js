@@ -59,10 +59,16 @@ export const Wrapper = styled.div`
   }
 
   .weather-info {
+    cursor: pointer;
     height: 15rem;
     width: 6rem;
     position: absolute;
     left: -4.2%;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05), translate(5px);
+    }
 
     .weather-icon {
       ${weatherInfo}
@@ -168,7 +174,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Icon = styled(ImLocation)`
-  width: ${({width}) => `${width}rem`};
-  height: ${({height}) => `${height}rem`};
-  margin-right: ${({margin}) => `${margin}rem`};
+  width: ${({ width }) => `${width}rem`};
+  height: ${({ height }) => `${height}rem`};
+  margin-right: ${({ margin }) => `${margin}rem`};
 `;
